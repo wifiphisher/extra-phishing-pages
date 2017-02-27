@@ -4,8 +4,7 @@ This repository contains community-built phishing scenarios for the <a href="htt
 
 # Scenarios :
 
-### GoPro-Phish
-
+### GoPro-Phish :
 This scenario is used to get a GoPro AP password
 
 #How to create a scenario :
