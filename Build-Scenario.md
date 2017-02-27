@@ -40,17 +40,17 @@ The HTML files may also contain some special syntax (think placeholders) describ
 
 At the time of writing, the main process passes the following data:
 
-  target_ap_essid <str>: The ESSID of the target Access Point
-  target_ap_bssid <str>: The BSSID (MAC) address of the target Access Point
-  target_ap_channel <str>: The channel of the target Access Point
-  target_ap_vendor <str>: The vendor's name of the target Access Point
-  target_ap_logo_path <str>: The relative path of the target Access Point vendor's logo in the filesystem
-  APs <list>: A list containing AP dictionaries of the Access Points captured during the
-      AP <dict>: A dictionary holding the following information regarding an Access Point:
-          channel <str>: The channel of the Access Point
-          essid <str> The ESSID of the Access Point
-          bssid <str> The BSSID (MAC) address of the Access Point
-          vendor <str> The vendor's name of the Access Point
+  <b>target_ap_essid <str>:</b> The ESSID of the target Access Point
+  <b>target_ap_bssid <str>:</b> The BSSID (MAC) address of the target Access Point
+  <b>target_ap_channel <str>:</b> The channel of the target Access Point
+  <b>target_ap_vendor <str>:</b> The vendor's name of the target Access Point
+  <b>target_ap_logo_path <str>:</b> The relative path of the target Access Point vendor's logo in the filesystem
+  <b>APs <list>:</b> A list containing AP dictionaries of the Access Points captured during the
+      <b>AP <dict>:</b> A dictionary holding the following information regarding an Access Point:
+          <b>channel <str>:</b> The channel of the Access Point
+          <b>essid <str> :</b>The ESSID of the Access Point
+          <b>bssid <str> :</b>The BSSID (MAC) address of the Access Point
+          <b>vendor <str> :</b>The vendor's name of the Access Point
 
   Note that the above values may be 'None' accordingly. For example, all the target_* values will be None if there user did not target an Access Point (by using --essid option). The 'target_ap_logo_path' will be None if the logo of the specific vendor does not exist in the repository.
 
