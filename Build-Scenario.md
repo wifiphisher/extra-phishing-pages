@@ -40,7 +40,7 @@ The HTML files may also contain some special syntax (think placeholders) describ
 
 At the time of writing, the main process passes the following data:
 
-  <b>target_ap_essid <str>:</b> The ESSID of the target Access Point
+  <b>target_ap_essid <str>:</b> The ESSID of the target Access Point<br/>
   <b>target_ap_bssid <str>:</b> The BSSID (MAC) address of the target Access Point
   <b>target_ap_channel <str>:</b> The channel of the target Access Point
   <b>target_ap_vendor <str>:</b> The vendor's name of the target Access Point
