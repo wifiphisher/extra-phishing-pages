@@ -66,7 +66,7 @@ In order for wifiphisher to know which credentials to log, the values of the 'na
 ####Example
 -------
 
-Here's a snippet from a template (index.html):
+<b>Here's a snippet from a template (index.html):</b>
 
   <p> Dear {{ victim_name }}, This is a message from {{ ISP }}.
   A problem was detected regarding your {{ target_ap_vendor }} router. </p>
