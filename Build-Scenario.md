@@ -13,20 +13,20 @@ For specific target-oriented attacks, custom scenarios may be necessary.
   - Description (mandatory): A quick description (<50 words) of the scenario
   - PayloadPath (optional): If the phishing scenario pushes malwares to victims, users can insert the absolute path of  the malicious executable here
 
-  ii) context: This section is optional and holds user-defined variables that may be later injected to the template.
+ii) context: This section is optional and holds user-defined variables that may be later injected to the template.
 
 ####Example
 -------
 
 Here's an example of a config.ini file:
 
- # This is a comment
- [info]
- Name: ISP warning page
- Description: A warning page from victim's ISP asking for DSL credentials
- [context]
- victim_name: John Phisher
- victim_ISP: Interwebz
+ "# This is a comment"<br/>
+ [info]<br/>
+ Name: ISP warning page<br/>
+ Description: A warning page from victim's ISP asking for DSL credentials<br/>
+ [context]<br/>
+ victim_name: John Phisher<br/>
+ victim_ISP: Interwebz<br/>
 
 2) Create the template files
   A template contains the static parts of the desired HTML output and may consist of several static HTML files, images, CSS or Javascript files. Dynamic languages (e.g. PHP) are not supported.
@@ -68,8 +68,8 @@ In order for wifiphisher to know which credentials to log, the values of the 'na
 
 <b>Here's a snippet from a template (index.html):</b>
 
-  <p> Dear {{ victim_name }}, This is a message from {{ ISP }}.
-  A problem was detected regarding your {{ target_ap_vendor }} router. </p>
+<p> Dear {{ victim_name }}, This is a message from {{ ISP }}.</p>
+  <p>A problem was detected regarding your {{ target_ap_vendor }} router. </p>
   <p> Please write your credentials to re-connect over PPPOE/PPPOA.</p>
   <input type="text" name="wphshr-username"></input>
   <input type="text" name="wphshr-password"></input>
