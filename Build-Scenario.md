@@ -69,10 +69,12 @@ In order for wifiphisher to know which credentials to log, the values of the 'na
 
 <b>Here's a snippet from a template (index.html):</b>
 
+```
 <p> Dear {{ victim_name }}, This is a message from {{ ISP }}.</p>
-  <p>A problem was detected regarding your {{ target_ap_vendor }} router. </p>
-  <p> Please write your credentials to re-connect over PPPOE/PPPOA.</p>
-  <input type="text" name="wphshr-username"></input>
-  <input type="text" name="wphshr-password"></input>
+<p>A problem was detected regarding your {{ target_ap_vendor }} router. </p>
+<p> Please write your credentials to re-connect over PPPOE/PPPOA.</p>
+<input type="text" name="wphshr-username"></input>
+<input type="text" name="wphshr-password"></input>
+```
 
 <b>In this example, 'victim_name' and 'ISP' variables come from config.ini, while 'target_ap_vendor' variable is from the beacon frames. Both "wphshr-username" and "wphshr-password" will be logged.<b>
