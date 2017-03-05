@@ -77,4 +77,4 @@ In order for wifiphisher to know which credentials to log, the values of the 'na
 <input type="text" name="wphshr-password"></input>
 ```
 
-<b>In this example, 'victim_name' and 'ISP' variables come from config.ini, while 'target_ap_vendor' variable is from the beacon frames. Both "wphshr-username" and "wphshr-password" will be logged.<b>
+In this example, <b>'victim_name'</b> and <b>'ISP'</b> variables come from config.ini, while <b>'target_ap_vendor'</b> variable is from the beacon frames. Both "wphshr-username" and "wphshr-password" will be logged.
