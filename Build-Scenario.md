@@ -18,15 +18,16 @@ ii) context: This section is optional and holds user-defined variables that may 
 ####Example
 -------
 
-Here's an example of a config.ini file:
-
- "# This is a comment"<br/>
- [info]<br/>
- Name: ISP warning page<br/>
- Description: A warning page from victim's ISP asking for DSL credentials<br/>
- [context]<br/>
- victim_name: John Phisher<br/>
- victim_ISP: Interwebz<br/>
+Here`s an example of a config.ini file:
+```
+ # This is a comment
+ [info]
+ Name: ISP warning page
+ Description: A warning page from victim`s ISP asking for DSL credentials
+ [context]
+ victim_name: John Phisher
+ victim_ISP: Interwebz
+```
 
 2) Create the template files
   A template contains the static parts of the desired HTML output and may consist of several static HTML files, images, CSS or Javascript files. Dynamic languages (e.g. PHP) are not supported.
