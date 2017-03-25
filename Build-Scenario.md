@@ -1,9 +1,9 @@
-#Creating a custom phishing scenario
+# Creating a custom phishing scenario
 -----------------------------------
 
 For specific target-oriented attacks, custom scenarios may be necessary.
 
-###Creating a phishing scenario is easy and consists of two steps:
+### Creating a phishing scenario is easy and consists of two steps:
 
 1) Create the config.ini
   A config.ini file lies in template's root directory and its contents can be divided into two sections:
@@ -15,7 +15,7 @@ For specific target-oriented attacks, custom scenarios may be necessary.
 
 ii) context: This section is optional and holds user-defined variables that may be later injected to the template.
 
-####Example
+#### Example
 -------
 
 Here`s an example of a config.ini file:
@@ -41,17 +41,17 @@ The HTML files may also contain some special syntax (think placeholders) describ
 
 At the time of writing, the main process passes the following data:
 
-  <b>target_ap_essid <str>:</b> The ESSID of the target Access Point<br/>
-  <b>target_ap_bssid <str>:</b> The BSSID (MAC) address of the target Access Point<br/>
-  <b>target_ap_channel <str>:</b> The channel of the target Access Point<br/>
-  <b>target_ap_vendor <str>:</b> The vendor's name of the target Access Point<br/>
-  <b>target_ap_logo_path <str>:</b> The relative path of the target Access Point vendor's logo in the filesystem<br/>
-  <b>APs <list>:</b> A list containing AP dictionaries of the Access Points captured during the<br/>
-      <b>AP <dict>:</b> A dictionary holding the following information regarding an Access Point:<br/>
-          <b>channel <str>:</b> The channel of the Access Point<br/>
-          <b>essid <str> :</b>The ESSID of the Access Point<br/>
-          <b>bssid <str> :</b>The BSSID (MAC) address of the Access Point<br/>
-          <b>vendor <str> :</b>The vendor's name of the Access Point<br/>
+  ```target_ap_essid``` : The ESSID of the target Access Point<br/>
+  ```target_ap_bssid``` : The BSSID (MAC) address of the target Access Point<br/>
+  ```target_ap_channel``` : The channel of the target Access Point<br/>
+  ```target_ap_vendor``` : The vendor's name of the target Access Point<br/>
+  ```target_ap_logo_path``` : The relative path of the target Access Point vendor's logo in the filesystem<br/>
+  ```APs``` : A list containing AP dictionaries of the Access Points captured during the<br/>
+      ```AP``` : A dictionary holding the following information regarding an Access Point:<br/>
+          ```channel``` : The channel of the Access Point<br/>
+          ```essid```  :The ESSID of the Access Point<br/>
+          ```bssid```  :The BSSID (MAC) address of the Access Point<br/>
+          ```vendor```  :The vendor's name of the Access Point<br/>
 
   Note that the above values may be 'None' accordingly. For example, all the target_* values will be None if there user did not target an Access Point (by using --essid option). The 'target_ap_logo_path' will be None if the logo of the specific vendor does not exist in the repository.
 
@@ -59,12 +59,12 @@ At the time of writing, the main process passes the following data:
 
   In case of naming conflicts, the variables from the configuration file will override those coming from the beacon frames.
 
-###Logging credentials
+### Logging credentials
 -------------------
 
 In order for wifiphisher to know which credentials to log, the values of the 'name' HTML attributes need to be prefixed with the 'wfphshr' string. During POST requests, wifiphisher will log all variables that are prefixed with this string.
 
-####Example
+#### Example
 -------
 
 <b>Here's a snippet from a template (index.html):</b>
