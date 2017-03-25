@@ -7,6 +7,6 @@ This repository contains community-built phishing scenarios for the <a href="htt
 ### GoPro-Phish :
 This scenario is used to get a GoPro AP password
 
-#How to create a scenario :
+# How to create a scenario :
 
-Read Build-Scenario.md 
+[Read Build-Scenario.md](https://github.com/Splinter0/extra-phishing-pages/blob/master/Build-Scenario.md)
