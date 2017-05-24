@@ -1,22 +1,11 @@
-# Phishing Pages
+# Community-built phishing scenarios
 
-This repository contains community-built phishing scenarios for the <a href="https://github.com/wifiphisher/wifiphisher">Wifiphisher</a> tool.
+<a href="https://github.com/wifiphisher/wifiphisher">Wifiphisher</a> already comes with a number of phishing scenarios. This dedicated repo contains even more phishing scenarios contributed by the community. If you have ever created a phishing scenario using Wifiphisher's template engine, you are welcome to share it with the rest of the community by sumitting a Pull Request in this repo.  
 
-# Scenarios :
+To include these scenaris in your Wifiphisher installation, simply drop them under the `wifiphisher/data/phishingpages` directory.
 
-### gopro-phish :
-This scenario is used to get a GoPro AP password
-### device-modal :
-Shows the iOS/Android WiFi login modal on phones and tablets
-### starbucks-login :
-A Starbucks page asking for credentials
-### google-login :
-A page asking for Google credentials
-### yahoo-login :
-A page asking for Yahoo credentials
-### facebook-login :
-A page asking for Facebook credentials
+To create a phishing scenario read the <a href="https://wifiphisher.org/docs.html">Creating a custom phishing scenario</a> section in our <a href="https://wifiphisher.org/docs.html">docs</a>.
 
-# How to create a scenario :
+# Disclaimer
 
-[Read Build-Scenario.md](https://github.com/wifiphisher/extra-phishing-pages/blob/master/Build-Scenario.md)
+Authors do not own the logos under the directory. Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research.
