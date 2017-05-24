@@ -6,6 +6,8 @@ To include these scenarios in your Wifiphisher installation, simply drop them un
 
 To create a phishing scenario read the <a href="https://wifiphisher.org/docs.html">Creating a custom phishing scenario</a> section in our <a href="https://wifiphisher.org/docs.html">docs</a>.
 
+*Note:* The scenarios included in this repo haven't been strictly reviewed nor maintained by the developers of Wifiphisher. 
+
 # Disclaimer
 
 Authors do not own the logos under the directory. Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research.
